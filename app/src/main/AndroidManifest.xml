@@ -21,7 +21,7 @@
         </activity>
         <activity android:name=".activities_launch_modes.ActivityB" android:launchMode="standard"/>
         <activity android:name=".activities_launch_modes.ActivityC" android:launchMode="standard"/>
-        <activity android:name=".activities_launch_modes.ActivityD" android:launchMode="standard"/>
+        <activity android:name=".activities_launch_modes.ActivityD" android:launchMode="singleTop"/>
 
     </application>
 

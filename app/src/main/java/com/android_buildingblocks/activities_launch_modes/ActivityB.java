@@ -14,7 +14,7 @@ import com.android_buildingblocks.R;
 public class ActivityB extends AppCompatActivity {
 
     private Button buttonClickMeB;
-    private static final String TAG = "Acitivity";
+    private static final String TAG = "Activity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

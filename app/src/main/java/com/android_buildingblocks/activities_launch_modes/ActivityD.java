@@ -14,7 +14,17 @@ import com.android_buildingblocks.R;
 public class ActivityD extends AppCompatActivity {
 
     private Button buttonClickMeD;
-    private static final String TAG = "Acitivity";
+    private static final String TAG = "Activity";
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        if(intent.getExtras() != null){
+            String launchMode = intent.getStringExtra("ARG_LAUNCH_MODE");
+            Log.d("ARG_LAUNCH_MODE",launchMode);
+        }
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,7 +37,8 @@ public class ActivityD extends AppCompatActivity {
         buttonClickMeD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ActivityD.this, ActivityB.class);
+                Intent intent = new Intent(ActivityD.this, ActivityD.class);
+                intent.putExtra("ARG_LAUNCH_MODE","SINGLE_TOP");
                 startActivity(intent);
             }
         });

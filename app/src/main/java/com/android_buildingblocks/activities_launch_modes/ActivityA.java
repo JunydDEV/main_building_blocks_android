@@ -15,7 +15,7 @@ public class ActivityA extends AppCompatActivity {
 
     private Button buttonClickMeA;
 
-    private static final String TAG = "Acitivity";
+    private static final String TAG = "Activity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
