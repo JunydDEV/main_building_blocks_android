@@ -1,4 +1,4 @@
-package com.android_buildingblocks.activities;
+package com.android_buildingblocks.activities_introduction;
 
 import android.app.Activity;
 import android.content.Intent;
