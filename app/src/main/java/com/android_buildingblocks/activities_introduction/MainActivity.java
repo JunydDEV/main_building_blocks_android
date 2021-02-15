@@ -39,9 +39,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                User user = new User();
+
                 //Explicit Intent
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("ARG_PERSON_NAME","ANAS");
+                intent.putExtra("ARG_USER",user);
                 startActivityForResult(intent,123);
 
             }

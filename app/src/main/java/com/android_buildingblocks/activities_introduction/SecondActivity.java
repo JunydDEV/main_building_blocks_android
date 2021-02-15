@@ -16,6 +16,8 @@ public class SecondActivity extends Activity {
     //access_modifier className instanceName
     private Button buttonFinish;
 
+    //TypeCasting: to convert a type from one form to another
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,8 +28,10 @@ public class SecondActivity extends Activity {
 
         Intent intent = getIntent();
         if (intent.getExtras() != null) {
-            String personName = intent.getStringExtra("ARG_PERSON_NAME");
-            Log.d("PersonName", personName);
+            User user = (User) intent.getSerializableExtra("ARG_USER");
+            Log.d("User", user.name);
+            Log.d("User", user.phoneNumber);
+            Log.d("User", user.address);
         }
 
 
