@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.android_buildingblocks">
 
     <application
@@ -8,7 +9,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidBuildingBlocks">
+        android:theme="@style/Theme.AndroidBuildingBlocks"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name=".activities_introduction.MainActivity"/>
         <activity android:name=".activities_introduction.SecondActivity"/>
@@ -21,7 +23,7 @@
         </activity>
         <activity android:name=".activities_launch_modes.ActivityB" android:launchMode="standard"/>
         <activity android:name=".activities_launch_modes.ActivityC" android:launchMode="standard"/>
-        <activity android:name=".activities_launch_modes.ActivityD" android:launchMode="singleTop"/>
+        <activity android:name=".activities_launch_modes.ActivityD" android:launchMode="singleInstance"/>
 
     </application>
 
