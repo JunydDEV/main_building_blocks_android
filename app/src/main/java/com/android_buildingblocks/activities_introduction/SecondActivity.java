@@ -28,7 +28,7 @@ public class SecondActivity extends Activity {
 
         Intent intent = getIntent();
         if (intent.getExtras() != null) {
-            User user = (User) intent.getSerializableExtra("ARG_USER");
+            User user = intent.getParcelableExtra("ARG_USER");
             Log.d("User", user.name);
             Log.d("User", user.phoneNumber);
             Log.d("User", user.address);

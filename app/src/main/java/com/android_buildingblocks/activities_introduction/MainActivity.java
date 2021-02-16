@@ -2,6 +2,7 @@ package com.android_buildingblocks.activities_introduction;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         buttonCLickMe1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 User user = new User();
 
                 //Explicit Intent
@@ -52,8 +52,12 @@ public class MainActivity extends AppCompatActivity {
         buttonCLickMe2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+
+                //Implicit Intent
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://github.com/JunydDEV/main_building_blocks_android"));
                 startActivity(intent);
+
             }
         });
 
